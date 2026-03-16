@@ -1,0 +1,12 @@
+t = int(input())
+for _ in range(t):
+    n = int(input())
+    a = list(map(int, input().split()))
+    
+    even = sum(1 for x in a if x % 2 == 0)
+    odd = n - even
+    
+    if even == 0 or odd == 0:
+        print(0)
+    else:
+        print(min(even, odd))

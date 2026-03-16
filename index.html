@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAA Lab EL</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./backend/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="./backend/js/script.js"></script>
+</head>
+<body class="bg-gray-100 w-full">
+    <section class="bg-img-custom s1">
+        <nav class="nav-bar w-full">
+            <div class="max-w-7xl mx-auto px-2 sm:px-2 lg:px-4">
+                <div class="flex justify-between items-center h-8">
+
+                    <div class="hidden md:flex space-x-4">
+                        <a href="index.html" class="text-white hover:bg-zinc-900 px-3 py-2 rounded-md">Home</a>
+                        <a href="./backend/ganttcharts.html" class="text-white hover:bg-zinc-900 px-3 py-2 rounded-md">Simulator</a>
+                        <a href="about.html" class="text-white hover:bg-zinc-900 px-3 py-2 rounded-md">About</a>
+                    </div>
+
+                    <button id="menu-btn" class="md:hidden text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+    
+            <div id="mobile-menu" class="bg-blur hidden md:hidden transition-all duration-300 ease-in-out overflow-hidden">
+                <a href="index.html" class="block text-white bg-blur px-3 py-2">Home</a>
+                <a href="./backend/ganttchart.html" class="block text-white bg-blur px-3 py-2">Simulator</a>
+                <a href="about.html" class="block text-white bg-blur px-3 py-2">About</a>
+            </div>
+        </nav>
+        <main class="p-6 bg-cover bg-center bg-no-repeat min-h-screen flex flex-col justify-evenly">
+            <div>
+                <h1 class="bg-blur text-8xl text-white text-center font-bold bg-black bg-opacity-50 p-4 rounded-md">
+                    Operating Systems Lab EL
+                </h1>
+            </div>
+            <br>
+            <div class="flex flex-col justify-center items-center">
+                <p class="w-full bg-blur text-2xl text-white text-center font-bold bg-black bg-opacity-50 p-4 rounded-md">
+                    Interactive Virtual Lab for CPU Scheduling Algorithms 
+                    <br>
+                    Round Robin and Priority Scheduling Simulation
+                </p>
+                <br>
+                <a href="backend/ganttcharts.html" class="btn-sim text-2xl text-white bg-blur px-2 py-2 rounded-lg w-48 text-center">Get Started</a>
+                <br>
+            </div>
+        </main>
+    </section>  
+    
+    <div class="flex justify-center bg-black flex-wrap gap-4 py-10">
+        <h1 class="text-white text-center text-4xl">CPU Schedulers</h1>
+
+        <div class="flex justify-center flex-wrap gap-10 py-4">
+            <div class="bg-zinc-800 shadow-md rounded-lg px-6 py-4 w-1/2 md:w-1/3">
+              <h2 class="text-white text-2xl font-bold mb-2">Round Robin</h2>
+              <p class="text-zinc-300 mb-4">
+                The Round Robin algorithm, known for its fairness, allocates each process a fixed time slice, ensuring that all processes get CPU time in a cyclical manner. This approach is simple and efficient, ideal for time-sharing systems.
+              </p>
+              <a href="backend/ganttcharts.html" class="ml-2 bg-blue-600 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded">
+                Round Robin 
+              </a>
+            </div>
+    
+            <div class="bg-zinc-800 shadow-md rounded-lg px-6 py-4 w-1/2 md:w-1/3">
+              <h2 class="text-white text-2xl font-bold mb-2">Priority Scheduling</h2>
+              <p class="text-zinc-300 mb-4">
+                Priority Scheduling assigns CPU resources based on the priority levels of processes, allowing higher-priority tasks to execute before lower-priority ones. This algorithm is often used where critical tasks need to be completed quickly.
+              </p>
+              <a href="backend/ganttcharts.html" class="ml-2 bg-blue-600 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded">
+                Priority Scheduling
+              </a>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <h1 class="mb-4 md:mb-0">
+                    <p class="text-white">&copy; 2024 Operating Systems Lab EL</p>
+                </h1>
+                <div class="flex space-x-4">
+                    <a href="about.html" class="hover:text-gray-100">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
